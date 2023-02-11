@@ -1,10 +1,8 @@
 ﻿using System;
 using System.Diagnostics;
-using System.Threading;
-using System.Threading.Tasks;
 using System.IO;
+using System.Threading;
 using System.Windows.Forms;
-using System.Security.Principal;
 using static DiskGeniusBypass.LicenseFileHandler;
 
 namespace DiskGeniusBypass
@@ -30,12 +28,6 @@ namespace DiskGeniusBypass
 
         public static void Main(string[] args)
         {
-            // Check if we're an Administrator
-            if (!IsAdministrator())
-            {
-                MessageBox.Show("The program is not running as administrator. Please run as administrator", "Failed to start", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                return;
-            }
             formatLicensePaths();
 
             Bypass();
@@ -98,14 +90,6 @@ namespace DiskGeniusBypass
             
         }
 
-        // http://stackoverflow.com/questions/11660184/ddg#11660205
-        public static bool IsAdministrator()
-        {
-            return (new WindowsPrincipal(WindowsIdentity.GetCurrent()))
-                      .IsInRole(WindowsBuiltInRole.Administrator);
-        }
-
         // This method stores the license files in 
-        
     }
 }

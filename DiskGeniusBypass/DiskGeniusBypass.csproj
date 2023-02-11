@@ -35,11 +35,13 @@
   <PropertyGroup>
     <StartupObject>DiskGeniusBypass.DiskGeniusBypass</StartupObject>
   </PropertyGroup>
+  <PropertyGroup />
   <PropertyGroup>
-    <NoWin32Manifest>true</NoWin32Manifest>
+    <ApplicationManifest>app.manifest</ApplicationManifest>
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="LicenseFileHandler.cs" />
