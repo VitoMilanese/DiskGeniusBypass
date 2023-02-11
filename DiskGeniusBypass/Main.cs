@@ -38,6 +38,10 @@ namespace DiskGeniusBypass
             };
             LicenseFiles = licenseFiles.Select(p => Path.Combine(DiskGeniusPath, p)).ToList();
 
+#if DEBUG
+            MessageBox.Show("Now attach to Process, if you need.");
+#endif
+
             Bypass();
         }
 
