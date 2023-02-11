@@ -44,9 +44,12 @@
     <None Include="app.manifest" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="FileStoreItem.cs" />
     <Compile Include="LicenseFileHandler.cs" />
     <Compile Include="Main.cs" />
+    <Compile Include="MemStoreItem.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Enums.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="System" />
